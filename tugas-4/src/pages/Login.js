@@ -3,13 +3,11 @@ import React from "react";
 function Login() {
   return (
     <div>
-      <h1>Halaman Login</h1>
+      <h1>Login</h1>
       <form>
-        <label>Username: </label>
-        <input type="text" /><br /><br />
-        <label>Password: </label>
-        <input type="password" /><br /><br />
-        <button type="submit">Login</button>
+        <input type="text" placeholder="Username" /><br /><br />
+        <input type="password" placeholder="Password" /><br /><br />
+        <button type="submit">Masuk</button>
       </form>
     </div>
   );

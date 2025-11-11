@@ -1,36 +1,30 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Login from "./pages/Login";
+import "./App.css";
 
 function App() {
   return (
     <Router>
-      <div style={{ backgroundColor: "#f0f0f0", minHeight: "100vh" }}>
-        <nav
-          style={{
-            display: "flex",
-            gap: "20px",
-            padding: "10px 20px",
-            background: "#007bff",
-          }}
-        >
-          <Link to="/" style={{ color: "white", textDecoration: "none" }}>Home</Link>
-          <Link to="/about" style={{ color: "white", textDecoration: "none" }}>About</Link>
-          <Link to="/contact" style={{ color: "white", textDecoration: "none" }}>Contact</Link>
-          <Link to="/login" style={{ color: "white", textDecoration: "none" }}>Login</Link>
+      <header>
+        <nav>
+          <NavLink to="/" end>Home</NavLink>
+          <NavLink to="/about">About Us</NavLink>
+          <NavLink to="/contact">Contact</NavLink>
+          <NavLink to="/login">Login</NavLink>
         </nav>
+      </header>
 
-        <div style={{ padding: "20px" }}>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/login" element={<Login />} />
-          </Routes>
-        </div>
+      <div className="container">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
       </div>
     </Router>
   );

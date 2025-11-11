@@ -1,7 +1,12 @@
 import React from "react";
 
 function Home() {
-  return <h1>Ini Halaman Home</h1>;
+  return (
+    <div>
+      <h1>Selamat Datang di Halaman Website Belajar React Router</h1>
+      <p>Ini merupakan halaman utama dari website belajar React Router .</p>
+    </div>
+  );
 }
 
 export default Home;

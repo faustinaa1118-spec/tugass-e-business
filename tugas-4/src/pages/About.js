@@ -1,7 +1,12 @@
 import React from "react";
 
 function About() {
-  return <h1>Ini Halaman About</h1>;
+  return (
+    <div>
+      <h1>Tentang Website ini</h1>
+      <p>Website ini untuk belajar React Router.</p>
+    </div>
+  );
 }
 
 export default About;
