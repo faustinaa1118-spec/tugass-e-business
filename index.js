@@ -8,15 +8,16 @@ app.use(express.json());
 
 // Data sementara (anggap seperti database sementara)
 let items = [
-  { id: 1, nama: "Pensil", harga: 2000 },
-  { id: 2, nama: "Buku", harga: 5000 }
+  { id: 1, nama: "kalkulator", harga: 20000 },
+  { id: 2, nama: "Buku", harga: 5000 },
+  { id: 3, nama: "pena", harga: 3000 },
 ];
 
 // ====== ROUTES (CRUD) ======
 
 // A. Route dasar untuk cek server
 app.get('/', (req, res) => {
-  res.send('API CRUD Tugas 6 Berjalan ✅');
+  res.send('API Tugas 6 Berhasil');
 });
 
 // B. READ - Tampilkan semua data
@@ -41,7 +42,7 @@ app.post('/items', (req, res) => {
     harga: req.body.harga
   };
   items.push(newItem);
-  res.status(201).json({ pesan: 'Data berhasil ditambahkan', data: newItem });
+  res.status(201).json({ pesan: 'Data berhasil ditambah', data: newItem });
 });
 
 // E. UPDATE - Ubah data berdasarkan ID
